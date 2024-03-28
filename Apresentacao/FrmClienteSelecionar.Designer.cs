@@ -33,6 +33,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             buttonPesquisa = new Button();
             labelPesquisa = new Label();
             textBoxPesquisa = new TextBox();
@@ -193,6 +194,8 @@
             // colSexo
             // 
             colSexo.DataPropertyName = "Sexo";
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            colSexo.DefaultCellStyle = dataGridViewCellStyle5;
             colSexo.HeaderText = "Sexo";
             colSexo.MinimumWidth = 6;
             colSexo.Name = "colSexo";
@@ -201,10 +204,10 @@
             // ColLimiteCompra
             // 
             ColLimiteCompra.DataPropertyName = "LimiteCompra";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = "R$ 0.00";
-            ColLimiteCompra.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = "R$ 0.00";
+            ColLimiteCompra.DefaultCellStyle = dataGridViewCellStyle6;
             ColLimiteCompra.HeaderText = "Limite de Compra";
             ColLimiteCompra.MinimumWidth = 6;
             ColLimiteCompra.Name = "ColLimiteCompra";
