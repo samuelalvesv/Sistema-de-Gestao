@@ -45,7 +45,7 @@
             ColIdCliente = new DataGridViewTextBoxColumn();
             ColNome = new DataGridViewTextBoxColumn();
             ColDataNascimento = new DataGridViewTextBoxColumn();
-            ColSexo = new DataGridViewCheckBoxColumn();
+            colSexo = new DataGridViewTextBoxColumn();
             ColLimiteCompra = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrincipal).BeginInit();
             SuspendLayout();
@@ -79,7 +79,7 @@
             // buttonInserir
             // 
             buttonInserir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonInserir.Location = new Point(302, 502);
+            buttonInserir.Location = new Point(426, 502);
             buttonInserir.Name = "buttonInserir";
             buttonInserir.Size = new Size(94, 29);
             buttonInserir.TabIndex = 4;
@@ -90,7 +90,7 @@
             // buttonAlterar
             // 
             buttonAlterar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonAlterar.Location = new Point(412, 502);
+            buttonAlterar.Location = new Point(536, 502);
             buttonAlterar.Name = "buttonAlterar";
             buttonAlterar.Size = new Size(94, 29);
             buttonAlterar.TabIndex = 5;
@@ -101,7 +101,7 @@
             // buttonExcluir
             // 
             buttonExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonExcluir.Location = new Point(522, 502);
+            buttonExcluir.Location = new Point(646, 502);
             buttonExcluir.Name = "buttonExcluir";
             buttonExcluir.Size = new Size(94, 29);
             buttonExcluir.TabIndex = 6;
@@ -112,7 +112,7 @@
             // buttonConsultar
             // 
             buttonConsultar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonConsultar.Location = new Point(632, 502);
+            buttonConsultar.Location = new Point(756, 502);
             buttonConsultar.Name = "buttonConsultar";
             buttonConsultar.Size = new Size(94, 29);
             buttonConsultar.TabIndex = 7;
@@ -123,7 +123,7 @@
             // buttonFechar
             // 
             buttonFechar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonFechar.Location = new Point(742, 502);
+            buttonFechar.Location = new Point(866, 502);
             buttonFechar.Name = "buttonFechar";
             buttonFechar.Size = new Size(94, 29);
             buttonFechar.TabIndex = 8;
@@ -135,16 +135,18 @@
             // 
             dataGridViewCellStyle1.BackColor = Color.FromArgb(224, 224, 224);
             dataGridViewPrincipal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewPrincipal.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewPrincipal.BackgroundColor = SystemColors.Window;
             dataGridViewPrincipal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPrincipal.Columns.AddRange(new DataGridViewColumn[] { ColIdCliente, ColNome, ColDataNascimento, ColSexo, ColLimiteCompra });
+            dataGridViewPrincipal.Columns.AddRange(new DataGridViewColumn[] { ColIdCliente, ColNome, ColDataNascimento, colSexo, ColLimiteCompra });
             dataGridViewPrincipal.Location = new Point(17, 65);
             dataGridViewPrincipal.MultiSelect = false;
             dataGridViewPrincipal.Name = "dataGridViewPrincipal";
             dataGridViewPrincipal.RowHeadersWidth = 51;
             dataGridViewPrincipal.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewPrincipal.Size = new Size(819, 427);
+            dataGridViewPrincipal.Size = new Size(943, 427);
             dataGridViewPrincipal.TabIndex = 3;
+            dataGridViewPrincipal.CellFormatting += dataGridViewPrincipal_CellFormatting;
             // 
             // ColIdCliente
             // 
@@ -188,16 +190,13 @@
             ColDataNascimento.Resizable = DataGridViewTriState.False;
             ColDataNascimento.Width = 180;
             // 
-            // ColSexo
+            // colSexo
             // 
-            ColSexo.DataPropertyName = "Sexo";
-            ColSexo.HeaderText = "Sexo";
-            ColSexo.MinimumWidth = 6;
-            ColSexo.Name = "ColSexo";
-            ColSexo.ReadOnly = true;
-            ColSexo.Resizable = DataGridViewTriState.False;
-            ColSexo.SortMode = DataGridViewColumnSortMode.Automatic;
-            ColSexo.Width = 50;
+            colSexo.DataPropertyName = "Sexo";
+            colSexo.HeaderText = "Sexo";
+            colSexo.MinimumWidth = 6;
+            colSexo.Name = "colSexo";
+            colSexo.Width = 125;
             // 
             // ColLimiteCompra
             // 
@@ -217,7 +216,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(848, 543);
+            ClientSize = new Size(972, 543);
             Controls.Add(dataGridViewPrincipal);
             Controls.Add(buttonFechar);
             Controls.Add(buttonConsultar);
@@ -253,7 +252,7 @@
         private DataGridViewTextBoxColumn ColIdCliente;
         private DataGridViewTextBoxColumn ColNome;
         private DataGridViewTextBoxColumn ColDataNascimento;
-        private DataGridViewCheckBoxColumn ColSexo;
+        private DataGridViewTextBoxColumn colSexo;
         private DataGridViewTextBoxColumn ColLimiteCompra;
     }
 }

@@ -20,6 +20,18 @@ namespace Apresentacao
 
             //Não gerar colunas automaticamente
             dataGridViewPrincipal.AutoGenerateColumns = false;
+
+            dataGridViewPrincipal.CellFormatting += DataGridViewPrincipal_CellFormatting;
+        }
+
+        private void DataGridViewPrincipal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridViewPrincipal.Columns["colSexo"].Index && e.Value != null)
+            {
+                bool sexo = (bool)e.Value;
+                e.Value = sexo ? "Masculino" : "Feminino";
+                e.FormattingApplied = true;
+            }
         }
 
         private void AtualizarGrid()
@@ -132,6 +144,35 @@ namespace Apresentacao
             //Instanciar formulárop de cadastro
             frmClienteCadastrar frmClienteCadastrar = new frmClienteCadastrar(AcaoNaTela.Consultar, clienteSelecionado);
             frmClienteCadastrar.ShowDialog();
+        }
+
+        private void dataGridViewPrincipal_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Verifica se a coluna atual é a coluna do Sexo
+            if (dataGridViewPrincipal.Columns[e.ColumnIndex].Name == "SexoDescricao")
+            {
+                // Obtém o valor da célula atual
+                var cellValue = e.Value;
+
+                // Verifica se o valor é do tipo booleano
+                if (cellValue is bool)
+                {
+                    bool valorSexo = (bool)cellValue;
+
+                    // Define o texto a ser exibido com base no valor booleano
+                    if (valorSexo)
+                    {
+                        e.Value = "Masculino";
+                    }
+                    else
+                    {
+                        e.Value = "Feminino";
+                    }
+
+                    // Indica que o evento tratou a célula
+                    e.FormattingApplied = true;
+                }
+            }
         }
     }
 }
