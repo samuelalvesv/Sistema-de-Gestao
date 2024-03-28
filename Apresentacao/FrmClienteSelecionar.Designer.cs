@@ -63,7 +63,7 @@
             // labelPesquisa
             // 
             labelPesquisa.AutoSize = true;
-            labelPesquisa.Location = new Point(11, 20);
+            labelPesquisa.Location = new Point(15, 20);
             labelPesquisa.Name = "labelPesquisa";
             labelPesquisa.Size = new Size(116, 20);
             labelPesquisa.TabIndex = 0;
@@ -78,7 +78,8 @@
             // 
             // buttonInserir
             // 
-            buttonInserir.Location = new Point(291, 712);
+            buttonInserir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonInserir.Location = new Point(302, 502);
             buttonInserir.Name = "buttonInserir";
             buttonInserir.Size = new Size(94, 29);
             buttonInserir.TabIndex = 4;
@@ -88,7 +89,8 @@
             // 
             // buttonAlterar
             // 
-            buttonAlterar.Location = new Point(401, 712);
+            buttonAlterar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonAlterar.Location = new Point(412, 502);
             buttonAlterar.Name = "buttonAlterar";
             buttonAlterar.Size = new Size(94, 29);
             buttonAlterar.TabIndex = 5;
@@ -98,7 +100,8 @@
             // 
             // buttonExcluir
             // 
-            buttonExcluir.Location = new Point(511, 712);
+            buttonExcluir.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonExcluir.Location = new Point(522, 502);
             buttonExcluir.Name = "buttonExcluir";
             buttonExcluir.Size = new Size(94, 29);
             buttonExcluir.TabIndex = 6;
@@ -108,7 +111,8 @@
             // 
             // buttonConsultar
             // 
-            buttonConsultar.Location = new Point(621, 712);
+            buttonConsultar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonConsultar.Location = new Point(632, 502);
             buttonConsultar.Name = "buttonConsultar";
             buttonConsultar.Size = new Size(94, 29);
             buttonConsultar.TabIndex = 7;
@@ -118,7 +122,8 @@
             // 
             // buttonFechar
             // 
-            buttonFechar.Location = new Point(731, 712);
+            buttonFechar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonFechar.Location = new Point(742, 502);
             buttonFechar.Name = "buttonFechar";
             buttonFechar.Size = new Size(94, 29);
             buttonFechar.TabIndex = 8;
@@ -133,12 +138,12 @@
             dataGridViewPrincipal.BackgroundColor = SystemColors.Window;
             dataGridViewPrincipal.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewPrincipal.Columns.AddRange(new DataGridViewColumn[] { ColIdCliente, ColNome, ColDataNascimento, ColSexo, ColLimiteCompra });
-            dataGridViewPrincipal.Location = new Point(6, 65);
+            dataGridViewPrincipal.Location = new Point(17, 65);
             dataGridViewPrincipal.MultiSelect = false;
             dataGridViewPrincipal.Name = "dataGridViewPrincipal";
             dataGridViewPrincipal.RowHeadersWidth = 51;
             dataGridViewPrincipal.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewPrincipal.Size = new Size(819, 629);
+            dataGridViewPrincipal.Size = new Size(819, 427);
             dataGridViewPrincipal.TabIndex = 3;
             // 
             // ColIdCliente
@@ -212,7 +217,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(848, 753);
+            ClientSize = new Size(848, 543);
             Controls.Add(dataGridViewPrincipal);
             Controls.Add(buttonFechar);
             Controls.Add(buttonConsultar);
